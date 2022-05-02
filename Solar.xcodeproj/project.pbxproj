@@ -13,6 +13,10 @@
 		043B0F8328187ED200F42464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043B0F8128187ED200F42464 /* Main.storyboard */; };
 		043B0F8528187ED400F42464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043B0F8428187ED400F42464 /* Assets.xcassets */; };
 		043B0F8828187ED400F42464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043B0F8628187ED400F42464 /* LaunchScreen.storyboard */; };
+		043B0F9028188B3500F42464 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B0F8F28188B3500F42464 /* PreviewController.swift */; };
+		043B0F92281893CA00F42464 /* FirstTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B0F91281893CA00F42464 /* FirstTimeController.swift */; };
+		043B0F95281A07D400F42464 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 043B0F94281A07D400F42464 /* SDWebImage */; };
+		043B0F97281A07D400F42464 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 043B0F96281A07D400F42464 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		043B0F8428187ED400F42464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043B0F8728187ED400F42464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043B0F8928187ED400F42464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043B0F8F28188B3500F42464 /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
+		043B0F91281893CA00F42464 /* FirstTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043B0F97281A07D400F42464 /* SDWebImageMapKit in Frameworks */,
+				043B0F95281A07D400F42464 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,8 @@
 				043B0F8428187ED400F42464 /* Assets.xcassets */,
 				043B0F8628187ED400F42464 /* LaunchScreen.storyboard */,
 				043B0F8928187ED400F42464 /* Info.plist */,
+				043B0F8F28188B3500F42464 /* PreviewController.swift */,
+				043B0F91281893CA00F42464 /* FirstTimeController.swift */,
 			);
 			path = Solar;
 			sourceTree = "<group>";
@@ -83,6 +93,10 @@
 			dependencies = (
 			);
 			name = Solar;
+			packageProductDependencies = (
+				043B0F94281A07D400F42464 /* SDWebImage */,
+				043B0F96281A07D400F42464 /* SDWebImageMapKit */,
+			);
 			productName = Solar;
 			productReference = 043B0F7828187ED200F42464 /* Solar.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 043B0F6F28187ED200F42464;
+			packageReferences = (
+				043B0F93281A07D400F42464 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 043B0F7928187ED200F42464 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043B0F9028188B3500F42464 /* PreviewController.swift in Sources */,
+				043B0F92281893CA00F42464 /* FirstTimeController.swift in Sources */,
 				043B0F8028187ED200F42464 /* ViewController.swift in Sources */,
 				043B0F7C28187ED200F42464 /* AppDelegate.swift in Sources */,
 				043B0F7E28187ED200F42464 /* SceneDelegate.swift in Sources */,
@@ -356,6 +375,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		043B0F93281A07D400F42464 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		043B0F94281A07D400F42464 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043B0F93281A07D400F42464 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		043B0F96281A07D400F42464 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043B0F93281A07D400F42464 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 043B0F7028187ED200F42464 /* Project object */;
 }
