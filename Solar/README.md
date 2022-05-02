@@ -1,5 +1,5 @@
 # Solar - A simple App for exploring the Solar System (Work in Progress still)
-![](https://i.imgur.com/iMGLr9v.jpg
+![](https://i.imgur.com/iMGLr9v.jpg)
 
 ## Used Materials / Packages / Pods
 
