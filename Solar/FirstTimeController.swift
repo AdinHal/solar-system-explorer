@@ -39,6 +39,7 @@ class FirstTimeController : UIViewController{
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         self.performSegue(withIdentifier: "firstTimeToHome", sender: self)
     }
+    
 }
 
 extension UIViewController {
@@ -47,7 +48,7 @@ extension UIViewController {
 
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-550, width: 150, height: 35))
         toastLabel.backgroundColor = UIColor.white.withAlphaComponent(0.6)
-        toastLabel.textColor = UIColor.white
+        toastLabel.textColor = UIColor.red
         toastLabel.font = font
         toastLabel.textAlignment = .center;
         toastLabel.text = message
