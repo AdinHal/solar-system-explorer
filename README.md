@@ -11,4 +11,4 @@ See more : [SDWebImage](https://github.com/SDWebImage/SDWebImage)
 
 ## Note
 
-The current version only works with an iPhone 13 Pro Max Simulator / Phone. The next update will fix it and make it compact with all types of devices.
+Still working on this app.
