@@ -20,59 +20,75 @@ class PreviewController : UIViewController{
     @IBOutlet var satelitesLabel: UILabel!
     var valueToPass = String()
 
-    private var dataTask: URLSessionDataTask?
+    private var da: URLSessionDataTask?
     
-    private var planet: Planet? {
+    private var plane: Planet? {
         didSet{
-            guard let planet = planet else {
+            guard let pt = plane else {
                 return
             }
-            titleLabel.text = "\(planet.name)".uppercased()
+            titleLabel.text = "\(pt.name)".uppercased()
             titleLabel.sizeToFit()
-            descriptionLabel.text = "\(planet.description)"
+            descriptionLabel.text = "\(pt.planetDescription)"
             descriptionLabel.sizeToFit()
-            distanceFromEarthLabel.text = "\(planet.distanceFromEarth)"
+            distanceFromEarthLabel.text = "\(pt.distanceFromEarth)"
             distanceFromEarthLabel.sizeToFit()
-            orbitalSpeedLabel.text = "\(planet.rotationSpeed)"
-            rotationPeriodLabel.text = "\(planet.rotationPeriod)"
-            surfaceAreaLabel.text = "\(planet.surfaceArea)"
-            satelitesLabel.text = "\(planet.satelites)"
-            planetImage.sd_setImage(with: URL(string: "\(planet.imageUrl)"))
+            orbitalSpeedLabel.text = "\(pt.rotationSpeed)"
+            rotationPeriodLabel.text = "\(pt.rotationPeriod)"
+            surfaceAreaLabel.text = "\(pt.surfaceArea)"
+            satelitesLabel.text = "\(pt.satelites)"
+            planetImage.sd_setImage(with: URL(string: "\(pt.imageURL)"))
             planetImage.sizeToFit()
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         setGradient()
-        loadData()
+        fetchData()
         super.viewDidAppear(true)
         self.showToast(message: "Pull Down To Dismiss!", font: .systemFont(ofSize: 11.0))
     }
     
     override func viewDidLoad() {
         setGradient()
-        loadData()
+        fetchData()
         super.viewDidLoad()
     }
     
     
-    func loadData(){
+    func fetchData(){
         guard let url = URL(string: "https://space-api-json.herokuapp.com/planets/\(valueToPass)") else{return}
         
-        dataTask?.cancel()
-        dataTask = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
+        da?.cancel()
+        da = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
             guard let data = data else {
                 return
             }
             if let decodedData = try? JSONDecoder().decode(Planet.self, from: data){
                 DispatchQueue.main.async {
-                    self.planet = decodedData
+                    self.plane = decodedData
                 }
             }
         })
         
-        dataTask?.resume()
+        da?.resume()
     }
+    
+    struct Planet: Codable{
+        let name, planetDescription, rotationSpeed, distanceFromEarth: String
+        let satelites: Int
+        let surfaceArea, rotationPeriod: String
+        let imageURL: String
+        
+        enum CodingKeys: String, CodingKey{
+            case name
+            case planetDescription="description"
+            case rotationSpeed, distanceFromEarth, satelites, surfaceArea, rotationPeriod
+            case imageURL = "imageUrl"
+        }
+    }
+
+    typealias Planets = [Planet]
     
     func setGradient(){
         let colorTop = UIColor(red: 7/255, green: 6/255, blue: 12/255, alpha: 1).cgColor
@@ -104,16 +120,4 @@ extension UIView{
             layer.borderColor = newValue?.cgColor
         }
     }
-}
-
-
-struct Planet: Decodable{
-    let name: String
-    let description: String
-    let rotationSpeed: String
-    let distanceFromEarth: String
-    let satelites: Int
-    let surfaceArea: String
-    let rotationPeriod: String
-    let imageUrl: String
 }

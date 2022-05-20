@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0410B29C2837C92700004FD3 /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410B29B2837C92700004FD3 /* PlanetCollectionViewCell.swift */; };
 		043B0F7C28187ED200F42464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B0F7B28187ED200F42464 /* AppDelegate.swift */; };
 		043B0F7E28187ED200F42464 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B0F7D28187ED200F42464 /* SceneDelegate.swift */; };
 		043B0F8028187ED200F42464 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B0F7F28187ED200F42464 /* ViewController.swift */; };
@@ -17,10 +18,13 @@
 		043B0F92281893CA00F42464 /* FirstTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B0F91281893CA00F42464 /* FirstTimeController.swift */; };
 		043B0F95281A07D400F42464 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 043B0F94281A07D400F42464 /* SDWebImage */; };
 		043B0F97281A07D400F42464 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 043B0F96281A07D400F42464 /* SDWebImageMapKit */; };
+		04D442EA2836D4A80087C2E9 /* SwipingControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D442E92836D4A80087C2E9 /* SwipingControler.swift */; };
 		04D65C85281FB9F300FE17E4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 04D65C84281FB9F300FE17E4 /* README.md */; };
+		04DB3EC12837D23800773158 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB3EC02837D23800773158 /* PageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0410B29B2837C92700004FD3 /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
 		043B0F7828187ED200F42464 /* Solar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043B0F7B28187ED200F42464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043B0F7D28187ED200F42464 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +35,9 @@
 		043B0F8928187ED400F42464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043B0F8F28188B3500F42464 /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
 		043B0F91281893CA00F42464 /* FirstTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeController.swift; sourceTree = "<group>"; };
+		04D442E92836D4A80087C2E9 /* SwipingControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingControler.swift; sourceTree = "<group>"; };
 		04D65C84281FB9F300FE17E4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		04DB3EC02837D23800773158 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 				043B0F8928187ED400F42464 /* Info.plist */,
 				043B0F8F28188B3500F42464 /* PreviewController.swift */,
 				043B0F91281893CA00F42464 /* FirstTimeController.swift */,
+				04D442E92836D4A80087C2E9 /* SwipingControler.swift */,
+				0410B29B2837C92700004FD3 /* PlanetCollectionViewCell.swift */,
+				04DB3EC02837D23800773158 /* PageCell.swift */,
 			);
 			path = Solar;
 			sourceTree = "<group>";
@@ -159,10 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D442EA2836D4A80087C2E9 /* SwipingControler.swift in Sources */,
 				043B0F9028188B3500F42464 /* PreviewController.swift in Sources */,
 				043B0F92281893CA00F42464 /* FirstTimeController.swift in Sources */,
+				0410B29C2837C92700004FD3 /* PlanetCollectionViewCell.swift in Sources */,
 				043B0F8028187ED200F42464 /* ViewController.swift in Sources */,
 				043B0F7C28187ED200F42464 /* AppDelegate.swift in Sources */,
+				04DB3EC12837D23800773158 /* PageCell.swift in Sources */,
 				043B0F7E28187ED200F42464 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
